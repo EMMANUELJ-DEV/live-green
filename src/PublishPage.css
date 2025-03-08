@@ -1,0 +1,477 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8f5;
+  }
+  
+  .publish-container {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Header Styles */
+  .publish-header {
+    background-color: #006400;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navigation ul li {
+    margin-right: 20px;
+  }
+  
+  .navigation ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Form Styles */
+  .publish-form {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .publish-form h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #006400;
+  }
+  
+  .title-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+  
+  .text-editor {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .text-editor .ql-editor {
+    color: black; /* Set the text color to black */
+    height: 250px; /* Adjust the height as needed */
+  }
+  
+  .image-upload {
+    margin-bottom: 20px;
+  }
+  
+  .image-preview {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .publish-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .publish-btn, .preview-btn {
+    background-color: #32cd32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .publish-btn:hover, .preview-btn:hover {
+    background-color: #228b22;
+  }
+  
+  /* Preview Styles */
+  .post-preview {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-preview h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #006400;
+  }
+  
+  .post-preview img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-top: 20px;
+  }
+/* Add this to your existing PublishPage.css */
+.tags-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+  
+.publish-page {
+  min-height: 100vh;
+  background: var(--background-light);
+  padding: 2rem 0;
+}
+
+.publish-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Cover Image Section */
+.cover-image-section {
+  margin-bottom: 2rem;
+}
+
+.image-input-container {
+  display: flex;
+  align-items: center;
+  background: var(--card-light);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
+}
+
+.input-icon {
+  color: var(--text-secondary);
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.cover-image-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+}
+
+.image-preview {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Title Input */
+.title-input-container {
+  margin-bottom: 2rem;
+}
+
+.title-input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: var(--card-light);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: var(--text-primary);
+  outline: none;
+  transition: all var(--transition-speed) ease;
+}
+
+.title-input:focus {
+  box-shadow: 0 0 0 2px rgba(121, 40, 202, 0.2);
+}
+
+/* Editor Container */
+.editor-container {
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.content-editor {
+  background: var(--card-light);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ql-toolbar {
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  background: var(--card-light);
+}
+
+.ql-container {
+  border: none !important;
+  background: var(--card-light);
+  min-height: 300px;
+}
+
+/* Tags Section */
+.tags-section {
+  margin-bottom: 2rem;
+}
+
+.tags-input-container {
+  display: flex;
+  align-items: center;
+  background: var(--card-light);
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tags-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Publishing Options */
+.publishing-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.visibility-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.option-icon {
+  font-size: 1.2rem;
+}
+
+.publish-button {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.publish-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Username Input */
+.username-input-container {
+  display: flex;
+  align-items: center;
+  background: var(--card-light);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-speed) ease;
+}
+
+.username-input-container:focus-within {
+  border-color: transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(var(--card-light), var(--card-light)),
+                    var(--primary-gradient);
+  box-shadow: 0 4px 15px rgba(121, 40, 202, 0.1);
+}
+
+.username-input {
+  flex: 1;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  margin-left: 1rem;
+}
+
+.username-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Error Message */
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.error-message svg {
+  font-size: 1.2rem;
+}
+
+/* Success Message */
+.success-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--primary-gradient);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(121, 40, 202, 0.3);
+}
+
+.success-message svg {
+  font-size: 1.2rem;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .image-input-container,
+  .title-input,
+  .content-editor,
+  .tags-input-container {
+    background: var(--card-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .ql-toolbar {
+    background: var(--card-dark);
+    border-bottom-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .ql-container {
+    background: var(--card-dark);
+  }
+
+  .title-input,
+  .cover-image-input,
+  .tags-input {
+    color: white;
+  }
+
+  .title-input::placeholder,
+  .cover-image-input::placeholder,
+  .tags-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .username-input-container {
+    background: var(--card-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .username-input-container:focus-within {
+    background-image: linear-gradient(var(--card-dark), var(--card-dark)),
+                      var(--primary-gradient);
+  }
+
+  .username-input {
+    color: white;
+  }
+
+  .error-message {
+    background: rgba(255, 77, 77, 0.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .publish-content {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .title-input {
+    font-size: 1.2rem;
+  }
+
+  .image-preview {
+    height: 200px;
+  }
+
+  .publishing-options {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .publish-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .username-input-container,
+  .error-message,
+  .success-message {
+    width: 100%;
+  }
+}
+    

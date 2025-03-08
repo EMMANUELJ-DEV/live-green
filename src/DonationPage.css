@@ -1,0 +1,517 @@
+.donation-page {
+  min-height: 100vh;
+  background: var(--background-light);
+  padding: 2rem 0;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(121, 40, 202, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 10%, rgba(255, 0, 128, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 10% 70%, rgba(255, 77, 77, 0.08) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+.donation-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+}
+
+.page-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Impact Stats */
+.impact-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.impact-card {
+  background: var(--card-light);
+  padding: 2.5rem 3rem;
+  border-radius: 24px;
+  text-align: center;
+  min-width: 220px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-speed) ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.impact-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.impact-card h3 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.impact-card p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Projects Section */
+.projects-section {
+  margin-bottom: 4rem;
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+.project-card {
+  background: var(--card-light);
+  padding: 2rem;
+  border-radius: 24px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-speed) ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-card.selected {
+  border: 2px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(var(--card-light), var(--card-light)),
+                    var(--primary-gradient);
+  box-shadow: 0 8px 30px rgba(121, 40, 202, 0.2);
+}
+
+.project-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.impact-label {
+  background: linear-gradient(135deg, rgba(121, 40, 202, 0.1), rgba(255, 0, 128, 0.1));
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.impact-label small {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Amount Section */
+.amount-section {
+  margin-bottom: 4rem;
+}
+
+.amount-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--text-primary);
+}
+
+.amount-options {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+.amount-button {
+  background: var(--card-light);
+  border: 2px solid transparent;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  min-width: 120px;
+  backdrop-filter: blur(10px);
+}
+
+.amount-button.selected {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 15px rgba(121, 40, 202, 0.3);
+}
+
+.custom-amount {
+  display: flex;
+  align-items: center;
+  background: var(--card-light);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  padding: 0.8rem 1.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.custom-amount span {
+  color: var(--text-secondary);
+  font-size: 1.3rem;
+  margin-right: 0.5rem;
+  font-weight: 600;
+}
+
+.custom-amount input {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  width: 120px;
+  outline: none;
+  font-weight: 600;
+}
+
+.custom-amount input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Payment Section */
+.payment-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.payment-method {
+  background: var(--card-light);
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-speed) ease;
+}
+
+.payment-method:hover {
+  border-image: var(--primary-gradient) 1;
+  box-shadow: 0 4px 15px rgba(121, 40, 202, 0.1);
+}
+
+.payment-method svg {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+}
+
+.payment-method.selected {
+  border: 2px solid transparent;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(var(--card-light), var(--card-light)),
+                    var(--primary-gradient);
+  box-shadow: 0 8px 30px rgba(121, 40, 202, 0.2);
+}
+
+.donate-button {
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  padding: 1.3rem 3.5rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  min-width: 250px;
+  box-shadow: 0 4px 15px rgba(121, 40, 202, 0.3);
+}
+
+.donate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(121, 40, 202, 0.4);
+}
+
+.donate-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.success-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: var(--primary-gradient);
+  color: white;
+  padding: 1.3rem 3.5rem;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  min-width: 250px;
+  box-shadow: 0 4px 15px rgba(121, 40, 202, 0.3);
+}
+
+.success-message svg {
+  font-size: 1.5rem;
+}
+
+/* Hive Username Section */
+.hive-username-section {
+  margin-bottom: 2rem;
+}
+
+.username-input-container {
+  display: flex;
+  align-items: center;
+  background: var(--card-light);
+  border: 2px solid transparent;
+  border-radius: 50px;
+  padding: 1rem 1.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-speed) ease;
+}
+
+.username-input-container:focus-within {
+  border-image: var(--primary-gradient) 1;
+  box-shadow: 0 4px 15px rgba(121, 40, 202, 0.1);
+}
+
+.username-input {
+  flex: 1;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-left: 1rem;
+  outline: none;
+}
+
+.username-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* Error Message */
+.error-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #ff4d4d;
+  background: rgba(255, 77, 77, 0.1);
+  padding: 1rem;
+  border-radius: 50px;
+  margin: 1rem auto 2rem;
+  max-width: 400px;
+  font-weight: 500;
+}
+
+.error-message svg {
+  font-size: 1.2rem;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .impact-card,
+  .project-card,
+  .amount-button,
+  .custom-amount,
+  .payment-method {
+    background: var(--card-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .project-card.selected {
+    background-image: linear-gradient(var(--card-dark), var(--card-dark)),
+                      var(--primary-gradient);
+  }
+
+  .custom-amount input {
+    color: white;
+  }
+
+  .amount-button {
+    color: white;
+  }
+
+  .payment-method {
+    color: white;
+  }
+
+  .impact-label {
+    background: linear-gradient(135deg, rgba(121, 40, 202, 0.2), rgba(255, 0, 128, 0.2));
+  }
+
+  .payment-method.selected {
+    background-image: linear-gradient(var(--card-dark), var(--card-dark)),
+                      var(--primary-gradient);
+  }
+
+  .username-input-container {
+    background: var(--card-dark);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .username-input {
+    color: white;
+  }
+
+  .error-message {
+    background: rgba(255, 77, 77, 0.2);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .donation-content {
+    padding: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .donation-content {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .page-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .impact-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .impact-card {
+    width: 100%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amount-options {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .amount-button,
+  .custom-amount {
+    width: 100%;
+  }
+
+  .payment-methods {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .payment-method {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .donate-button {
+    width: 100%;
+  }
+
+  .username-input-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .error-message {
+    width: 100%;
+    border-radius: 12px;
+    margin: 1rem 0 2rem;
+  }
+}
